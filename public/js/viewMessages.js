@@ -1,4 +1,4 @@
 const getMessages = () => {
-    console.log("button pressed");
-    alert("button pressed");
+    const passcode = document.querySelector("#passcode")
+    console.log("button pressed", passcode.value)
 }
