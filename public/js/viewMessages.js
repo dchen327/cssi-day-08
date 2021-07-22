@@ -5,11 +5,10 @@ const getMessages = () => {
         const data = snapshot.val()
         let matchFound = false
         for (let key in data) {
-            console.log(key, data[key])
-            if (key === passcode.value) {
+            if (data[key].passcode === passcode.value) {
                 matchFound = true
                 const specialMessage = document.querySelector("#specialMessage")
-                specialMessage.innerHTML = data[key]
+                specialMessage.innerHTML = data[key].message
             }
         }
         if (!matchFound) {
